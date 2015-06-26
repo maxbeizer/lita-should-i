@@ -7,7 +7,7 @@ module Lita
 
       def should_i(response)
         option = choose_option response.matches.first
-        response.reply "You should #{option}"
+        response.reply "You should #{option}."
       end
 
       private

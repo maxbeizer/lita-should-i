@@ -1,12 +1,12 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-should-i"
   spec.version       = "0.1.0"
-  spec.authors       = ["TODO: Write your name"]
+  spec.authors       = ["Max Beizer"]
   spec.email         = ["max.beizer@gmail.com"]
-  spec.description   = "TODO: Add a description"
-  spec.summary       = "TODO: Add a summary"
-  spec.homepage      = "TODO: Add a homepage"
-  spec.license       = "TODO: Add a license"
+  spec.description   = "because making your own decisions is hard"
+  spec.summary       = "Ask lita an either/or and get an answer."
+  spec.homepage      = "https://github.com/maxbeizer/lita-should-i"
+  spec.license       = "MIT"
   spec.metadata      = { "lita_plugin_type" => "handler" }
 
   spec.files         = `git ls-files`.split($/)
