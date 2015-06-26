@@ -1,0 +1,19 @@
+# lita-should-i
+
+TODO: Add a description of the plugin.
+
+## Installation
+
+Add lita-should-i to your Lita instance's Gemfile:
+
+``` ruby
+gem "lita-should-i"
+```
+
+## Configuration
+
+TODO: Describe any configuration attributes the plugin exposes.
+
+## Usage
+
+TODO: Describe the plugin's features and how to use them.
