@@ -6,13 +6,27 @@ module Lita
       })
 
       def should_i(response)
-        option = choose_option response.matches.first
+        option = build_response response.matches.first
         response.reply "You should #{option}."
       end
 
       private
-      def choose_option(matches)
-        matches.sample
+      def build_response(matches)
+        transform_person matches.sample
+      end
+
+      def transform_person(phrase)
+        [
+          [/\sme\b/i    , ' you'],
+          [/\smine\b/i  , ' yours'],
+          [/\smy\b/i    , ' your'],
+          [/\syou\b/i   , ' me'],
+          [/\syour\b/i  , ' my'],
+          [/\syours\b/i , ' mine']
+        ]
+        .select { |transform| phrase =~ transform.first }
+        .map    { |transform| phrase.gsub!(transform.first, transform.last) }
+        phrase
       end
     end
 
